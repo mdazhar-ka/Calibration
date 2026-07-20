@@ -1,0 +1,20 @@
+# Physical Target Board Settings
+board:
+  squares_x: 9               # Total physical squares horizontally
+  squares_y: 7               # Total physical squares vertically
+  square_size_mm: 22.0       # Size of one square edge in mm
+
+# Target Camera Input Settings
+camera:
+  name: "Angetube 1080p"
+  resolution: [1920, 1080]
+  index: 0
+  autofocus: 0               # 0 = Manual, 1 = Auto
+  manual_focus_val: 15       # Adjust until sharp at your target distance
+  auto_exposure: 0           # 0 = Manual, 1 = Auto (Set to 0 to lock exposure)
+  exposure_val: -6           # Manual exposure value (Logarithmic scale in Windows CAP_DSHOW)
+  
+# Pipeline Processing Settings
+processing:
+  use_modern_sb: true        # Use cv2.findChessboardCornersSB
+  save_verification_plot: true
